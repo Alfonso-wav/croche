@@ -127,8 +127,9 @@ main { max-width: 860px; margin: 0 auto; padding: 8px 16px 48px; }
 
 /* ---------- Inicio ---------- */
 .hero { text-align: center; padding: 24px 0 8px; }
-.hero-mascots { display: flex; justify-content: center; gap: 12px; }
-.hero-mascots .mascot { width: min(130px, 36vw); height: auto; animation: bob 3s ease-in-out infinite; }
+.hero-mascots { display: flex; justify-content: center; align-items: flex-end; gap: 20px; }
+.mascot { width: auto; max-width: 100%; display: block; }
+.hero-mascots .mascot { height: min(180px, 42vw) !important; animation: bob 3s ease-in-out infinite; }
 .hero-mascots .mascot:nth-child(2) { animation-delay: -1.5s; }
 @keyframes bob { 50% { transform: translateY(-8px) rotate(-2deg); } }
 .eyebrow { margin: 0; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; font-size: .85rem; }
@@ -182,12 +183,12 @@ main { max-width: 860px; margin: 0 auto; padding: 8px 16px 48px; }
 /* ---------- Lección ---------- */
 .back { display: inline-block; margin: 12px 0; text-decoration: none; font-weight: 700; }
 .lesson-head { display: flex; gap: 18px; align-items: center; }
-.lesson-mascot .mascot { width: 110px; height: auto; }
+.lesson-mascot .mascot { height: 130px !important; }
 .goal { margin: 0; }
 .abbr { background: var(--primary); color: var(--primary-ink); padding: 0 8px; border-radius: 6px; text-transform: none; }
 @media (max-width: 520px) {
   .lesson-head { flex-direction: column; align-items: flex-start; gap: 4px; }
-  .lesson-mascot .mascot { width: 84px; }
+  .lesson-mascot .mascot { height: 100px !important; }
 }
 
 .steps { list-style: none; padding: 0; counter-reset: step; display: grid; gap: 14px; }
@@ -219,7 +220,8 @@ main { max-width: 860px; margin: 0 auto; padding: 8px 16px 48px; }
 .tip p { margin: .2em 0 0; }
 .tip-kitty { background: var(--kitty-tint); }
 .tip-shrek { background: var(--shrek-tint); }
-.tip-face .mascot { width: 56px; height: auto; }
+.tip-face { flex: none; width: 56px; display: flex; justify-content: center; }
+.tip-face .mascot { height: 72px !important; }
 @media (max-width: 640px) { .tips { grid-template-columns: 1fr; } }
 
 .errors ul { background: var(--surface); border: 2px dashed var(--line); border-radius: var(--radius); padding: 14px 14px 14px 36px; margin: 0; }

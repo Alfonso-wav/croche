@@ -41,7 +41,7 @@ function hook(loops, opts = {}) {
   if (opts.pull) {
     const end = 120 + (opts.pull - 1) * 34 + 18;
     b += `<path d="M40 100 H${end}" stroke="var(--accent)" stroke-width="3" fill="none" marker-start="url(#ah)"/>`;
-    b += `<text x="${(40 + end) / 2}" y="116" text-anchor="middle" font-size="12" fill="var(--accent)" font-family="Fredoka" font-weight="600">saca por ${opts.pull === 1 ? '1 lazada' : opts.pull + ' lazadas'}</text>`;
+    b += `<text x="${end + 8}" y="104" text-anchor="start" font-size="12" fill="var(--accent)" font-family="Fredoka" font-weight="600">saca por ${opts.pull === 1 ? '1 lazada' : opts.pull + ' lazadas'}</text>`;
   }
   return svg(340, 124, b, `Gancho con ${loops} lazadas`);
 }
@@ -254,36 +254,11 @@ export const FIG = { hook, slipknot, grip, chainAnatomy, symbols, heights, rows,
 
 // ---------- Mascotas ----------
 export function kitty(size = 120) {
-  return `<svg ${NS} viewBox="0 0 200 170" width="${size}" class="mascot" aria-label="Gatita con lazo">
-    <path d="M38 62 L30 12 L80 40 Z" fill="#fff" stroke="#222" stroke-width="5" stroke-linejoin="round"/>
-    <path d="M162 62 L170 12 L120 40 Z" fill="#fff" stroke="#222" stroke-width="5" stroke-linejoin="round"/>
-    <ellipse cx="100" cy="96" rx="88" ry="66" fill="#fff" stroke="#222" stroke-width="5"/>
-    <ellipse cx="66" cy="98" rx="7" ry="10" fill="#222"/>
-    <ellipse cx="134" cy="98" rx="7" ry="10" fill="#222"/>
-    <ellipse cx="100" cy="114" rx="10" ry="7" fill="#ffd400" stroke="#222" stroke-width="3"/>
-    <path d="M10 92 L44 98 M8 112 L42 110 M14 132 L44 120 M190 92 L156 98 M192 112 L158 110 M186 132 L156 120" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-    <g transform="translate(150,32) rotate(18)">
-      <path d="M0 0 C -30 -30, -48 -6, -40 14 C -32 32, -10 18, 0 0 Z" fill="#ff1f4b" stroke="#222" stroke-width="4"/>
-      <path d="M0 0 C 30 -30, 48 -6, 40 14 C 32 32, 10 18, 0 0 Z" fill="#ff1f4b" stroke="#222" stroke-width="4"/>
-      <ellipse cx="0" cy="2" rx="11" ry="13" fill="#ff1f4b" stroke="#222" stroke-width="4"/>
-    </g>
-  </svg>`;
+  return `<img src="img/kitty.png" class="mascot mascot-kitty" style="height:${size}px" alt="Hello Kitty">`;
 }
 
 export function ogre(size = 120) {
-  return `<svg ${NS} viewBox="0 0 200 180" width="${size}" class="mascot" aria-label="Ogro verde">
-    <path d="M40 70 C 18 66, 6 54, 4 42 C 2 32, 12 30, 18 34 C 26 40, 34 52, 50 60" fill="#8db63a" stroke="#2b3a12" stroke-width="5" stroke-linejoin="round"/>
-    <ellipse cx="7" cy="38" rx="6" ry="9" fill="#5f8a1c"/>
-    <path d="M160 70 C 182 66, 194 54, 196 42 C 198 32, 188 30, 182 34 C 174 40, 166 52, 150 60" fill="#8db63a" stroke="#2b3a12" stroke-width="5" stroke-linejoin="round"/>
-    <ellipse cx="193" cy="38" rx="6" ry="9" fill="#5f8a1c"/>
-    <path d="M100 18 C 150 18, 172 56, 170 100 C 168 146, 140 172, 100 172 C 60 172, 32 146, 30 100 C 28 56, 50 18, 100 18 Z" fill="#9cc443" stroke="#2b3a12" stroke-width="5"/>
-    <path d="M58 72 C 68 62, 82 62, 90 70 M110 70 C 118 62, 132 62, 142 72" stroke="#3d4d17" stroke-width="7" stroke-linecap="round" fill="none"/>
-    <ellipse cx="76" cy="86" rx="11" ry="12" fill="#fff" stroke="#2b3a12" stroke-width="3"/>
-    <ellipse cx="124" cy="86" rx="11" ry="12" fill="#fff" stroke="#2b3a12" stroke-width="3"/>
-    <circle cx="78" cy="88" r="5" fill="#6b3f1d"/><circle cx="122" cy="88" r="5" fill="#6b3f1d"/>
-    <path d="M90 96 C 86 116, 92 122, 100 122 C 108 122, 114 116, 110 96" fill="#88b236" stroke="#2b3a12" stroke-width="4"/>
-    <path d="M62 132 C 80 150, 120 150, 138 132" stroke="#2b3a12" stroke-width="5" fill="none" stroke-linecap="round"/>
-  </svg>`;
+  return `<img src="img/shrek.png" class="mascot mascot-shrek" style="height:${size}px" alt="Shrek">`;
 }
 
 export function onion(size = 28) {
